@@ -50,31 +50,42 @@ The directory also contains:
 * `plotdihs.py` — plots and compares the resulting distributions.
 
 ---
-
 ### `VDOS/`
 
 Vibrational density of states (VDOS) data obtained from velocity autocorrelation functions calculated from molecular dynamics trajectories.
 
-The directory contains VDOS data for **single-chain (`sc`)** and **crystalline (`cryst`)** polypropylene and polystyrene systems at 300 K, including:
+The datasets are named according to temperature, system configuration, chain length, and polymer/tacticity:
 
-```text id="czj2kz"
-vdos_300K_sc_sPP.dat
-vdos_300K_sc_iPP.dat
-vdos_300K_sc_sPS.dat
-vdos_300K_sc_iPS.dat
+`vdos_300K_<configuration><chain_length>_<polymer>.dat`
 
-vdos_300K_cryst_sPP.dat
-vdos_300K_cryst_iPP.dat
-vdos_300K_cryst_sPS.dat
-vdos_300K_cryst_iPS.dat
-```
+The available configurations include:
 
-Additional VDOS datasets corresponding to different system sizes and dimensionalities are also provided.
+* `1c` — single-chain systems
+* `2c` — two-chain systems
+* `2d` — two-dimensional systems
+* `3d` — three-dimensional systems
 
-The directory contains:
+For syndiotactic polypropylene (`sPP`), VDOS data are provided for chain lengths of 40, 80, and 120 repeat units across the available configurations.
+
+Additional 40-repeat-unit datasets are provided for isotactic polypropylene (`iPP`), syndiotactic polystyrene (`sPS`), and isotactic polystyrene (`iPS`).
+
+Example files include:
+
+* `vdos_300K_1c40_sPP.dat`
+* `vdos_300K_1c80_sPP.dat`
+* `vdos_300K_1c120_sPP.dat`
+* `vdos_300K_2c40_sPP.dat`
+* `vdos_300K_2d40_sPP.dat`
+* `vdos_300K_3d40_sPP.dat`
+* `vdos_300K_1c40_iPP.dat`
+* `vdos_300K_1c40_sPS.dat`
+* `vdos_300K_1c40_iPS.dat`
+
+The directory also contains:
 
 * `get_vacf.py` — calculates the velocity autocorrelation function and VDOS.
 * `compare_vacf.py` — compares VDOS results between different systems.
+
 
 ## Polymer Notation
 
